@@ -109,14 +109,13 @@
       padding: 2rem;
       background-color: white;
       border-radius: var(--border-radius);
-      box-shadow: var(--box-shadow);
+
       transition: var(--transition);
       border-top: 4px solid;
     }
 
     .era-content:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
 
     .success .era-content {
@@ -263,39 +262,6 @@
 
     .work-title {
       font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem;
-      background: linear-gradient(135deg, var(--dark-color), #2c3e50);
-      color: white;
-      margin-top: 3rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("/api/placeholder/1600/400") center/cover no-repeat;
-      opacity: 0.05;
-      z-index: 0;
-    }
-
-    .footer-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .footer-title {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--accent-color);
     }
 
     @keyframes fadeIn {
@@ -568,39 +534,6 @@
       </div>
     </div>
   </div>
-
-
-  <script>
-    // Add animation when elements enter viewport
-    document.addEventListener("DOMContentLoaded", function () {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      document.querySelectorAll('.animate').forEach(el => {
-        observer.observe(el);
-      });
-
-      // Subtle hover effect for time markers
-      const timeMarkers = document.querySelectorAll('.time-marker');
-      timeMarkers.forEach(marker => {
-        marker.addEventListener('mouseenter', () => {
-          marker.style.transform = 'scale(1.05)';
-        });
-
-        marker.addEventListener('mouseleave', () => {
-          marker.style.transform = 'scale(1)';
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>
