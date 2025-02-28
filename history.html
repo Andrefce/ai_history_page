@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +18,13 @@
       --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
       --transition: all 0.3s ease;
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: 'Playfair Display', 'Georgia', serif;
       line-height: 1.7;
@@ -31,7 +32,7 @@
       background-color: var(--light-color);
       overflow-x: hidden;
     }
-    
+
     header {
       background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: white;
@@ -40,7 +41,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     header::before {
       content: '';
       position: absolute;
@@ -52,12 +53,12 @@
       opacity: 0.2;
       z-index: 0;
     }
-    
+
     .header-content {
       position: relative;
       z-index: 1;
     }
-    
+
     h1 {
       font-size: 3.5rem;
       margin-bottom: 1.5rem;
@@ -65,7 +66,7 @@
       letter-spacing: 2px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
-    
+
     .subtitle {
       font-style: italic;
       font-size: 1.4rem;
@@ -73,18 +74,18 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 4rem 2rem;
     }
-    
+
     .timeline {
       position: relative;
       margin: 3rem 0;
     }
-    
+
     .timeline::before {
       content: '';
       position: absolute;
@@ -95,12 +96,12 @@
       left: 50%;
       margin-left: -1px;
     }
-    
+
     .era {
       padding: 2rem 0;
       position: relative;
     }
-    
+
 
     .era-content {
       position: relative;
@@ -112,53 +113,53 @@
       transition: var(--transition);
       border-top: 4px solid;
     }
-    
+
     .era-content:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
-    
+
     .success .era-content {
       border-color: var(--success-color);
     }
-    
+
     .danger .era-content {
       border-color: var(--danger-color);
     }
-    
+
     .left {
       left: 0;
     }
-    
+
     .right {
       left: 55%;
     }
-    
+
     .time-marker {
       position: absolute;
       width: 140px;
-      height: 35px;
+      height: 45px;
       background-color: var(--accent-color);
       color: white;
       border-radius: 4px;
       display: flex;
       justify-content: center;
       align-items: center;
-      top: 20px;
+      top: 1px;
       z-index: 1;
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
-    
+
     .left .time-marker {
       right: -70px;
     }
-    
+
     .right .time-marker {
       left: -70px;
     }
-    
+
     .connector {
       position: absolute;
       width: 20px;
@@ -166,15 +167,15 @@
       background-color: var(--accent-color);
       top: 36px;
     }
-    
+
     .left .connector {
       right: -20px;
     }
-    
+
     .right .connector {
       left: -20px;
     }
-    
+
     .era-title {
       font-size: 1.8rem;
       font-weight: 700;
@@ -182,7 +183,7 @@
       margin-bottom: 1rem;
       font-family: 'Playfair Display', serif;
     }
-    
+
     .era-subtitle {
       font-weight: 700;
       color: var(--primary-color);
@@ -191,7 +192,7 @@
       margin-bottom: 1.5rem;
       font-size: 1.3rem;
     }
-    
+
     .development {
       margin-bottom: 1.2rem;
       padding: 0.6rem;
@@ -199,23 +200,23 @@
       transition: var(--transition);
       position: relative;
     }
-    
+
     .development:hover {
       background-color: rgba(58, 110, 165, 0.05);
     }
-    
+
     .year {
       font-weight: 700;
       color: var(--secondary-color);
       display: inline-block;
       margin-right: 0.5rem;
     }
-    
+
     .cause-list {
       margin-left: 1.5rem;
       list-style-type: none;
     }
-    
+
     .cause-item {
       margin-bottom: 1.5rem;
       padding: 0.8rem;
@@ -224,7 +225,7 @@
       counter-increment: item;
       position: relative;
     }
-    
+
     .cause-item:before {
       content: counter(item) ".";
       position: absolute;
@@ -232,38 +233,38 @@
       color: var(--danger-color);
       font-weight: 700;
     }
-    
+
     .cause-item:hover {
       background-color: rgba(231, 111, 81, 0.05);
     }
-    
+
     .cause-title {
       font-weight: 700;
       margin-bottom: 0.8rem;
       color: var(--danger-color);
     }
-    
+
     .cause-detail {
       margin-left: 0.5rem;
       margin-bottom: 0.8rem;
     }
-    
+
     .person {
       font-weight: 700;
       color: var(--accent-color);
       transition: var(--transition);
     }
-    
+
     .concept {
       font-weight: 700;
       color: var(--primary-color);
       transition: var(--transition);
     }
-    
+
     .work-title {
       font-style: italic;
     }
-    
+
     footer {
       text-align: center;
       padding: 3rem;
@@ -273,7 +274,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     footer::before {
       content: '';
       position: absolute;
@@ -285,48 +286,70 @@
       opacity: 0.05;
       z-index: 0;
     }
-    
+
     .footer-content {
       position: relative;
       z-index: 1;
     }
-    
+
     .footer-title {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       color: var(--accent-color);
     }
-    
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    
+
     .animate {
       opacity: 0;
       animation: fadeIn 0.8s forwards;
     }
-    
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-    .delay-4 { animation-delay: 0.8s; }
-    .delay-5 { animation-delay: 1s; }
-    
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-4 {
+      animation-delay: 0.8s;
+    }
+
+    .delay-5 {
+      animation-delay: 1s;
+    }
+
     @media (max-width: 768px) {
       .timeline::before {
         left: 20px;
       }
-      
+
       .era-content {
         width: calc(100% - 50px);
         padding: 1.5rem;
       }
-      
-      .left, .right {
+
+      .left,
+      .right {
         left: 40px;
       }
-      
+
       .time-marker {
         width: 80px;
         height: 30px;
@@ -334,35 +357,37 @@
         left: -40px !important;
         right: auto !important;
       }
-      
+
       .connector {
         width: 20px;
         left: -20px !important;
         right: auto !important;
       }
-      
+
       h1 {
         font-size: 2.5rem;
       }
-      
+
       .subtitle {
         font-size: 1.2rem;
       }
-      
+
       .era-title {
         font-size: 1.5rem;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="header-content">
       <h1 class="animate">The Evolution of Artificial Intelligence</h1>
-      <p class="subtitle animate delay-1">A Journey Through Time: Breakthroughs, Setbacks, and the Revolutionary Path of AI Technology</p>
+      <p class="subtitle animate delay-1">A Journey Through Time: Breakthroughs, Setbacks, and the Revolutionary Path of
+        AI Technology</p>
     </div>
   </header>
-  
+
   <div class="container">
     <div class="timeline">
       <!-- 1940s-1950s -->
@@ -373,20 +398,25 @@
           <h2 class="era-title">The Birth of AI</h2>
           <h3 class="era-subtitle">Key Developments</h3>
           <div class="development">
-            <span class="year">1943</span> – <span class="person">McCulloch & Pitts</span> propose the first mathematical model of a <span class="concept">neural network</span>.
+            <span class="year">1943</span> – <span class="person">McCulloch & Pitts</span> propose the first
+            mathematical model of a <span class="concept">neural network</span>.
           </div>
           <div class="development">
-            <span class="year">1950</span> – <span class="person">Alan Turing</span> publishes <span class="work-title">"Computing Machinery and Intelligence,"</span> introducing the <span class="concept">Turing Test</span>.
+            <span class="year">1950</span> – <span class="person">Alan Turing</span> publishes <span
+              class="work-title">"Computing Machinery and Intelligence,"</span> introducing the <span
+              class="concept">Turing Test</span>.
           </div>
           <div class="development">
-            <span class="year">1951</span> – <span class="person">Marvin Minsky & Dean Edmonds</span> create the first <span class="concept">neural network machine</span>, SNARC.
+            <span class="year">1951</span> – <span class="person">Marvin Minsky & Dean Edmonds</span> create the first
+            <span class="concept">neural network machine</span>, SNARC.
           </div>
           <div class="development">
-            <span class="year">1956</span> – The <span class="concept">Dartmouth Conference</span>, organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon, officially establishes AI as a field.
+            <span class="year">1956</span> – The <span class="concept">Dartmouth Conference</span>, organized by John
+            McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon, officially establishes AI as a field.
           </div>
         </div>
       </div>
-      
+
       <!-- 1956-1974 -->
       <div class="era success">
         <div class="era-content right animate delay-2">
@@ -395,17 +425,20 @@
           <h2 class="era-title">The First AI Boom</h2>
           <h3 class="era-subtitle">Key Developments</h3>
           <div class="development">
-            <span class="year">1957</span> – <span class="person">Frank Rosenblatt</span> creates the <span class="concept">Perceptron</span>, an early neural network model.
+            <span class="year">1957</span> – <span class="person">Frank Rosenblatt</span> creates the <span
+              class="concept">Perceptron</span>, an early neural network model.
           </div>
           <div class="development">
-            <span class="year">1958</span> – <span class="person">John McCarthy</span> develops <span class="concept">LISP</span>, a programming language for AI.
+            <span class="year">1958</span> – <span class="person">John McCarthy</span> develops <span
+              class="concept">LISP</span>, a programming language for AI.
           </div>
           <div class="development">
-            <span class="year">1966</span> – The first <span class="concept">chatbot</span>, <span class="concept">ELIZA</span>, is developed by Joseph Weizenbaum.
+            <span class="year">1966</span> – The first <span class="concept">chatbot</span>, <span
+              class="concept">ELIZA</span>, is developed by Joseph Weizenbaum.
           </div>
         </div>
       </div>
-      
+
       <!-- 1974-1980 -->
       <div class="era danger">
         <div class="era-content left animate delay-3">
@@ -416,24 +449,31 @@
           <ol class="cause-list">
             <li class="cause-item">
               <div class="cause-title">Overhyped Expectations & Funding Cuts</div>
-              <div class="cause-detail">Early AI pioneers made <span class="concept">bold claims</span> (e.g., Minsky & Papert suggested AI would achieve human-level reasoning within a generation).</div>
+              <div class="cause-detail">Early AI pioneers made <span class="concept">bold claims</span> (e.g., Minsky &
+                Papert suggested AI would achieve human-level reasoning within a generation).</div>
               <div class="cause-detail">Reality: AI failed to deliver practical applications.</div>
-              <div class="cause-detail"><span class="concept">DARPA (U.S. Defense)</span> and other funders <span class="concept">cut investments</span> due to lack of results.</div>
+              <div class="cause-detail"><span class="concept">DARPA (U.S. Defense)</span> and other funders <span
+                  class="concept">cut investments</span> due to lack of results.</div>
             </li>
             <li class="cause-item">
               <div class="cause-title">The Perceptron Limitation (1969)</div>
-              <div class="cause-detail"><span class="person">Marvin Minsky & Seymour Papert</span> publish <span class="work-title">Perceptrons</span>, showing that single-layer perceptrons <span class="concept">can't solve XOR problems</span>, diminishing enthusiasm for neural networks.</div>
+              <div class="cause-detail"><span class="person">Marvin Minsky & Seymour Papert</span> publish <span
+                  class="work-title">Perceptrons</span>, showing that single-layer perceptrons <span
+                  class="concept">can't solve XOR problems</span>, diminishing enthusiasm for neural networks.</div>
             </li>
             <li class="cause-item">
               <div class="cause-title">Failure of Machine Translation (ALPAC Report, 1966)</div>
-              <div class="cause-detail">The <span class="concept">U.S. government</span> reviews AI-driven language translation efforts.</div>
-              <div class="cause-detail">The <span class="concept">ALPAC Report</span> concludes that AI translation is <span class="concept">too slow, expensive, and inaccurate</span>.</div>
+              <div class="cause-detail">The <span class="concept">U.S. government</span> reviews AI-driven language
+                translation efforts.</div>
+              <div class="cause-detail">The <span class="concept">ALPAC Report</span> concludes that AI translation is
+                <span class="concept">too slow, expensive, and inaccurate</span>.
+              </div>
               <div class="cause-detail">Funding for machine translation research is cut.</div>
             </li>
           </ol>
         </div>
       </div>
-      
+
       <!-- 1980s -->
       <div class="era success">
         <div class="era-content right animate delay-1">
@@ -442,14 +482,16 @@
           <h2 class="era-title">The Expert Systems Boom</h2>
           <h3 class="era-subtitle">Key Developments</h3>
           <div class="development">
-            <span class="concept">Expert systems</span>, such as MYCIN (medical diagnosis) and XCON (configuring computers), dominate AI research.
+            <span class="concept">Expert systems</span>, such as MYCIN (medical diagnosis) and XCON (configuring
+            computers), dominate AI research.
           </div>
           <div class="development">
-            <span class="concept">Backpropagation Algorithm (1986)</span> by Rumelhart, Hinton, and Williams revives neural networks.
+            <span class="concept">Backpropagation Algorithm (1986)</span> by Rumelhart, Hinton, and Williams revives
+            neural networks.
           </div>
         </div>
       </div>
-      
+
       <!-- 1987-1993 -->
       <div class="era danger">
         <div class="era-content left animate delay-2">
@@ -460,23 +502,27 @@
           <ol class="cause-list">
             <li class="cause-item">
               <div class="cause-title">Collapse of Expert Systems</div>
-              <div class="cause-detail">Expert systems proved <span class="concept">brittle</span> and expensive to maintain.</div>
+              <div class="cause-detail">Expert systems proved <span class="concept">brittle</span> and expensive to
+                maintain.</div>
               <div class="cause-detail">They couldn't adapt to new situations or generalize knowledge.</div>
             </li>
             <li class="cause-item">
               <div class="cause-title">Funding Cuts (DARPA & Private Sector)</div>
-              <div class="cause-detail">AI research was no longer seen as <span class="concept">cost-effective</span>.</div>
-              <div class="cause-detail"><span class="concept">Japan's Fifth Generation Computer Project (1982-1992)</span> failed to deliver promised AI advancements.</div>
+              <div class="cause-detail">AI research was no longer seen as <span class="concept">cost-effective</span>.
+              </div>
+              <div class="cause-detail"><span class="concept">Japan's Fifth Generation Computer Project
+                  (1982-1992)</span> failed to deliver promised AI advancements.</div>
             </li>
             <li class="cause-item">
               <div class="cause-title">Lack of Computational Power</div>
               <div class="cause-detail">Hardware couldn't yet handle advanced machine learning.</div>
-              <div class="cause-detail">AI models required <span class="concept">too much memory and processing power</span>.</div>
+              <div class="cause-detail">AI models required <span class="concept">too much memory and processing
+                  power</span>.</div>
             </li>
           </ol>
         </div>
       </div>
-      
+
       <!-- 1990s-2010 -->
       <div class="era success">
         <div class="era-content right animate delay-3">
@@ -485,17 +531,20 @@
           <h2 class="era-title">AI Revival & Growth of Machine Learning</h2>
           <h3 class="era-subtitle">Key Developments</h3>
           <div class="development">
-            <span class="year">1997</span> – IBM's <span class="concept">Deep Blue</span> defeats world chess champion <span class="person">Garry Kasparov</span>.
+            <span class="year">1997</span> – IBM's <span class="concept">Deep Blue</span> defeats world chess champion
+            <span class="person">Garry Kasparov</span>.
           </div>
           <div class="development">
-            <span class="year">2006</span> – <span class="person">Geoffrey Hinton</span> revives deep learning with advances in neural networks.
+            <span class="year">2006</span> – <span class="person">Geoffrey Hinton</span> revives deep learning with
+            advances in neural networks.
           </div>
           <div class="development">
-            <span class="year">2009</span> – <span class="concept">Deep learning</span> starts gaining traction due to <span class="concept">big data & GPUs</span>.
+            <span class="year">2009</span> – <span class="concept">Deep learning</span> starts gaining traction due to
+            <span class="concept">big data & GPUs</span>.
           </div>
         </div>
       </div>
-      
+
       <!-- 2010-Present -->
       <div class="era success">
         <div class="era-content left animate delay-1">
@@ -504,23 +553,26 @@
           <h2 class="era-title">AI Renaissance</h2>
           <h3 class="era-subtitle">Key Developments</h3>
           <div class="development">
-            <span class="year">2012</span> – <span class="concept">AlexNet</span> wins the ImageNet competition, marking a <span class="concept">deep learning revolution</span>.
+            <span class="year">2012</span> – <span class="concept">AlexNet</span> wins the ImageNet competition, marking
+            a <span class="concept">deep learning revolution</span>.
           </div>
           <div class="development">
-            <span class="year">2016</span> – <span class="concept">AlphaGo</span> defeats world Go champion <span class="person">Lee Sedol</span>.
+            <span class="year">2016</span> – <span class="concept">AlphaGo</span> defeats world Go champion <span
+              class="person">Lee Sedol</span>.
           </div>
           <div class="development">
-            <span class="year">2023+</span> – <span class="concept">Generative AI (GPT, DALL·E, etc.)</span> reshapes multiple industries.
+            <span class="year">2023+</span> – <span class="concept">Generative AI (GPT, DALL·E, etc.)</span> reshapes
+            multiple industries.
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
 
   <script>
     // Add animation when elements enter viewport
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -531,18 +583,18 @@
       }, {
         threshold: 0.1
       });
-      
+
       document.querySelectorAll('.animate').forEach(el => {
         observer.observe(el);
       });
-      
+
       // Subtle hover effect for time markers
       const timeMarkers = document.querySelectorAll('.time-marker');
       timeMarkers.forEach(marker => {
         marker.addEventListener('mouseenter', () => {
           marker.style.transform = 'scale(1.05)';
         });
-        
+
         marker.addEventListener('mouseleave', () => {
           marker.style.transform = 'scale(1)';
         });
@@ -550,4 +602,5 @@
     });
   </script>
 </body>
+
 </html>
